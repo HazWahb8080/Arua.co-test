@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main-container {
+  background-color: rgb(241, 245, 249);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 3rem 1rem 3rem 1rem;
+}
+
+.form-wrapper {
+  width: 100%;
+  margin-bottom: 3rem /* 48px */;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    width: 33.333333%;
+  }
+}
+
+.loading-wrapper {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.loading-text {
+  width: 100%;
+  text-align: center;
+  font-size: 1.125rem /* 18px */;
+  line-height: 1.75rem /* 28px */;
+}
+
+.body-container {
+  padding-left: 12px;
+  padding-right: 12px;
+  overflow-y: auto;
+  align-items: start;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.results-wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+  overflow-y: scroll;
+  align-items: start;
+  justify-content: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.noArticles-text {
+  font-size: 1.25rem /* 20px */;
+  line-height: 1.75rem /* 28px */;
+  width: 100%;
+  text-align: center;
+}
+
+.search-input {
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 100px;
+  padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 2px #9999993d;
+  border: solid 1px transparent;
+  transition-property: color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  &:focus {
+    outline: 0px;
+    border: solid 1px rgb(78, 78, 78);
+  }
+}
+
+.search-btn {
+  border-width: 1px;
+  border-color: rgb(209, 213, 219);
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  color: rgb(107, 114, 128);
+
+  &:hover {
+    color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgb(209, 213, 219);
+  }
+
+  @media (min-width: 768px) {
+    width: 33.333333%;
+  }
+}
